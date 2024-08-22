@@ -1,0 +1,54 @@
+npm create vite@latest responsive-web -- --template react
+cd responsive-web
+npm i
+npm run dev
+ npm install react-icons --save
+####
+extensions
+ES7 React/Redux/GraphQL/R (extension for auto creation
+of ES7 React snippets)
+tailwind twin intellisense
+tailwind css  autocomplete for visual studio code
+
+####
+https
+https://github.com/WailAl-Sayadi/responsive-web.git
+https://WailAl-Sayadi/github.io/responsive-web
+
+echo "# responsive-web" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/WailAl-Sayadi/responsive-web.git
+git push -u origin main
+###
+deploy react app
+at the top of package.json
+add:  "homepage": "https://WailAl-Sayadi/github.io/responsive-web",
+        where responsive-web is the app name and repo name
+              WailAl-Sayadi is the github usr name
+then at the top of scripts add 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d  dist",
+at vite.config.js in top of export
+    add:  base: "/responsive-web",
+    export default defineConfig({
+    base: "/responsive-web",
+    plugins: [react()],
+    })
+npm i --save gh-pages
+git init
+cd .git
+cd ..
+git add .
+git commit -m "deploy react to github"
+git branch -M main
+git remote add origin https://github.com/WailAl-Sayadi/responsive-web.git\n
+git push -u origin main
+npm run deploy
+you the see in setting > pages , react web link
+https://wailal-sayadi.github.io/responsive-web/
+we can change the repo name and the link will be changed and still working
+responsive-web --> gym then
+https://wailal-sayadi.github.io/gym/
